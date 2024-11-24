@@ -1,0 +1,38 @@
+import React from "react";
+import { FaHome, FaUsers, FaChartBar, FaCog } from "react-icons/fa";
+import { MdAssessment } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import "./../styles/Sidebar.css";
+
+function Sidebar() {
+  return (
+    <aside className="sidebar">
+      <div className="logo">
+      <img src={require('../assets/Exploredamilag.png')} alt="Logo" className="logo-image" />
+      </div>
+      <nav className="nav">
+        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+          <FaHome className="icon" /> Home
+        </NavLink>
+        <NavLink to="/evaluation" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+          <MdAssessment className="icon" /> For Evaluation
+        </NavLink>
+        <NavLink to="/analytics" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+          <FaChartBar className="icon" /> Analytics
+        </NavLink>
+        <NavLink to="/manage-users" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+          <FaUsers className="icon" /> Manage Users
+        </NavLink>
+        <NavLink to="/settings" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+          <FaCog className="icon" /> Settings
+        </NavLink>
+      </nav>
+      <NavLink to="/accounts" className="user-profile">
+        <span className="user-name">Clyde Cellan</span>
+      </NavLink>
+
+    </aside>
+  );
+}
+
+export default Sidebar;

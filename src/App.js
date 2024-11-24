@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Login from "./components/Login";
+import ManageUsers from "./components/ManageUser";
+import Evaluation from "./components/Evaluation";
+import Accounts from "./components/Accounts";
+import Layout from "./components/Layout"; // Import the Layout component.
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Route for Login (No Sidebar) */}
+        <Route path="/" element={<Login />} />
+
+        {/* Routes with Sidebar */}
+        <Route
+          path="/manage-users"
+          element={
+            <Layout>
+              <ManageUsers />
+            </Layout>
+          }
+        />
+        <Route
+          path="/evaluation"
+          element={
+            <Layout>
+              <Evaluation />
+            </Layout>
+          }
+        />
+        <Route
+          path="/accounts"
+          element={
+            <Layout>
+              <Accounts />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
