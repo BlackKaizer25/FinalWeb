@@ -11,7 +11,7 @@ function Sidebar() {
       <img src={require('../assets/Exploredamilag.png')} alt="Logo" className="logo-image" />
       </div>
       <nav className="nav">
-        <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+        <NavLink to="/home" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
           <FaHome className="icon" /> Home
         </NavLink>
         <NavLink to="/evaluation" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>

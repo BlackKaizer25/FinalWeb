@@ -1,0 +1,204 @@
+/* General Container */
+.home-container {
+  padding: 20px;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.welcome-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Doughnut Chart Section */
+.doughnut-info-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap in smaller screens */
+  align-items: center;
+  gap: 20px;
+}
+
+.doughnut-chart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: auto; /* Center the chart in smaller screens */
+}
+
+.total-users {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.total-users p {
+  font-size: 12px;
+  color: #666;
+}
+
+.total-users h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Legend Styling */
+.legend {
+  flex: 1;
+  min-width: 200px; /* Ensures a minimum width for smaller screens */
+}
+
+.legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.legend-color.tourist {
+  background-color: #f5a623;
+}
+
+.legend-color.business {
+  background-color: #c4c4c4;
+}
+
+.legend-color.residents {
+  background-color: #4a90e2;
+}
+
+/* Last Update */
+.last-update {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+/* Stats Section */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #f5a623;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.stat-card .stat-title {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 12px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.new-users-icon {
+  background: #f5a623;
+}
+
+.active-users-icon {
+  background: #f5a623;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.new-business-icon {
+  background: #f5a623;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+
+  .legend {
+    font-size: 12px; /* Reduce font size for legend */
+  }
+}
+
+@media (max-width: 768px) {
+  .doughnut-info-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .stat-card h3 {
+    font-size: 28px; /* Slightly reduce stat font size */
+  }
+
+  .stat-card .stat-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-section h2 {
+    font-size: 20px; /* Reduce heading size */
+  }
+
+  .welcome-section p {
+    font-size: 12px; /* Reduce paragraph size */
+  }
+
+  .total-users h3 {
+    font-size: 18px; /* Reduce chart center font size */
+  }
+
+  .stat-card h3 {
+    font-size: 24px; /* Further reduce stat font size */
+  }
+}

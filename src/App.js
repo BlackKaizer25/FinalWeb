@@ -4,7 +4,11 @@ import Login from "./components/Login";
 import ManageUsers from "./components/ManageUser";
 import Evaluation from "./components/Evaluation";
 import Accounts from "./components/Accounts";
+import Analytics from "./components/Analytics";
 import Layout from "./components/Layout"; // Import the Layout component.
+import Settings from "./components/Settings";
+import Home from "./components/Home";
+
 
 function App() {
   return (
@@ -21,6 +25,7 @@ function App() {
               <ManageUsers />
             </Layout>
           }
+          
         />
         <Route
           path="/evaluation"
@@ -35,6 +40,31 @@ function App() {
           element={
             <Layout>
               <Accounts />
+            </Layout>
+          }
+        />
+        {/* Route for Analytics */}
+        <Route
+          path="/analytics"
+          element={
+            <Layout>
+              <Analytics /> {/* Render the Analytics component here */}
+            </Layout>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Layout>
+              <Settings /> {/* Render the Analytics component here */}
+            </Layout>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <Layout>
+              <Home /> {/* Render the Analytics component here */}
             </Layout>
           }
         />
