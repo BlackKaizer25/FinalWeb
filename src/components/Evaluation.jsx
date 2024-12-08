@@ -70,19 +70,18 @@ const Evaluation = () => {
     <div className="for-approval-container">
       {/* Header Section */}
       <header className="header">
-        <h2>Approval</h2>
-        <div className="header-stats">
-          <span>Total Entries: {entries.length}</span>
-          <div className="status-count">
-            <span className="done-count">
-              {entries.filter((e) => e.status === 'Active').length} Active
-            </span>
-            <span className="in-progress-count">
-              {entries.filter((e) => e.status === 'Pending').length} Pending
-            </span>
-          </div>
-        </div>
-      </header>
+  <h2>Approval</h2>
+  <div className="header-stats">
+    <span className="total-entries">Total Entries: {entries.length}</span>
+    <div className="status-count">
+      <span className="done-count">{entries.filter((e) => e.status === 'Active').length} Active</span>
+      <span className="in-progress-count">{entries.filter((e) => e.status === 'Pending').length} Pending</span>
+    </div>
+  </div>
+</header>
+
+
+
 
       {/* Toolbar Section */}
       <div className="toolbar">

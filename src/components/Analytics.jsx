@@ -127,7 +127,7 @@ const Analytics = () => {
         <h2>Response</h2>
           <Line data={lineChartData} options={lineChartOptions} />
         </div>
-        <div className="doughnut-chart">
+        <div className="analytics-doughnut-chart">
           <h2>Response Code Breakdown</h2>
           <Doughnut data={doughnutChartData} options={doughnutChartOptions} />
         </div>

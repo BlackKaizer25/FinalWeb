@@ -22,30 +22,39 @@
   gap: 10px; /* Space between items when wrapped */
 }
 
-.header-stats {
-  font-size: 14px;
+.for-approval-container .header-stats {
+  font-size: 16px;
+  font-weight: bold;
   color: black;
+  margin-left: auto;
+  text-align: right;
   display: flex;
   flex-direction: column;
-  text-align: right;
-  margin-left: auto;
-  font-weight: bold;
+  align-items: flex-end;
+  gap: 4px;
 }
 
-/* Status Count */
-.status-count {
-  display: flex;
-  gap: 10px;
-  margin-top: 5px;
-  justify-content: flex-end;
+.for-approval-container .total-entries {
+  font-size: 23px; /* Increased font size */
+  font-weight: bold; /* Make it bold */
+  color: black;
 }
 
-.done-count {
+.for-approval-container .status-count {
+  display: flex; /* Align items horizontally */
+  flex-direction: row; /* Ensure they are side-by-side */
+  justify-content: flex-end; /* Align to the right */
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Add spacing between Active and Pending */
+  text-align: right; /* Align text within each item to the right */
+}
+
+.for-approval-container .done-count {
   color: green;
   font-weight: bold;
 }
 
-.in-progress-count {
+.for-approval-container .in-progress-count {
   color: red;
   font-weight: bold;
 }

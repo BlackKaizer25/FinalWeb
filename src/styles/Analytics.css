@@ -80,7 +80,7 @@
 }
 
 /* Doughnut Chart Styling */
-.doughnut-chart {
+.analytics-container-doughnut-chart {
   background: #fff; /* Optional: Add a background for consistency */
   padding: 20px; /* Add padding for better spacing within the container */
   border-radius: 8px; /* Rounded corners for a neat look */
@@ -88,12 +88,12 @@
   text-align: center; /* Center-align the content */
 }
 
-.doughnut-chart h2 {
-  font-size: 18px; /* Title font size */
+.analytics-doughnut-chart h2 {
+  font-size: 25px; /* Title font size */
   margin-bottom: 10px; /* Add spacing below the title */
 }
 
-.doughnut-chart canvas {
+.analytics-container-doughnut-chart canvas {
   max-width: 100%; /* Ensure the chart resizes properly within the container */
   height: auto; /* Maintain aspect ratio */
 }

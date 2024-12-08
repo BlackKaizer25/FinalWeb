@@ -1,204 +1,188 @@
-/* General Container */
 .home-container {
   padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
 /* Welcome Section */
 .welcome-section {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
+  background-color: #e6e6e6;
+  padding: 30px;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-.welcome-section h2 {
+/* Chart Section */
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chart-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.chart-left h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.welcome-section p {
+.subtitle {
   font-size: 14px;
   color: #666;
   margin-bottom: 20px;
 }
 
-/* Doughnut Chart Section */
-.doughnut-info-container {
+.doughnut-chart-container {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+}
+
+.user-info {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap in smaller screens */
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: flex-start; /* Aligns content at the top */
+  margin-top: 20px; /* Adds space above the section */
 }
 
-.doughnut-chart {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  margin: auto; /* Center the chart in smaller screens */
-}
-
-.total-users {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.total-count {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0; /* Removes additional margins */
   text-align: center;
 }
 
-.total-users p {
+.user-count {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 0 0; /* Aligns closely below 'Total Users' */
+  text-align: center; /* Ensures it is centered */
+}
+
+
+.last-update {
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
-.total-users h3 {
-  font-size: 20px;
-  margin: 0;
+.vertical-divider {
+  width: 2px;
+  background-color: #000; /* Black and bold */
+  height: 240px;
+  margin: 0 30px; /* Space around the divider */
 }
 
-/* Legend Styling */
-.legend {
+.chart-right {
   flex: 1;
-  min-width: 200px; /* Ensures a minimum width for smaller screens */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.legend ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.legend li {
+.legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  font-size: 14px;
+  gap: 10px;
 }
 
 .legend-color {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
 }
 
-.legend-color.tourist {
-  background-color: #f5a623;
+.legend-label {
+  font-size: 16px;
+  color: #333;
 }
 
-.legend-color.business {
-  background-color: #c4c4c4;
-}
-
-.legend-color.residents {
-  background-color: #4a90e2;
-}
-
-/* Last Update */
-.last-update {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #666;
-  text-align: center;
-}
-
-/* Stats Section */
-.stats-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
 }
 
-.stat-card {
-  background: #fff;
-  padding: 20px;
-  border: 1px solid #f5a623;
-  border-radius: 10px;
-  text-align: center;
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
 }
 
-.stat-card h3 {
-  font-size: 32px;
-  margin: 10px 0;
+.card:hover {
+  transform: scale(1.05);
 }
 
-.stat-card .stat-title {
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.card-title {
   font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
 }
 
-.icon {
-  font-size: 12px;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.card-number {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
-.new-users-icon {
-  background: #f5a623;
+/* Card Colors */
+.new-users {
+  border-top: 5px solid #f5a623;
 }
 
-.active-users-icon {
-  background: #f5a623;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+.active-users {
+  border-top: 5px solid #4a90e2;
 }
 
-.new-business-icon {
-  background: #f5a623;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
+.new-business {
+  border-top: 5px solid #9b9b9b;
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-  .stats-section {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-  }
-
-  .legend {
-    font-size: 12px; /* Reduce font size for legend */
-  }
-}
-
 @media (max-width: 768px) {
-  .doughnut-info-container {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    text-align: center;
+  .chart-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .stats-section {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+  .vertical-divider {
+    display: none;
   }
 
-  .stat-card h3 {
-    font-size: 28px; /* Slightly reduce stat font size */
+  .summary-cards {
+    flex-direction: column;
   }
 
-  .stat-card .stat-title {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .welcome-section h2 {
-    font-size: 20px; /* Reduce heading size */
-  }
-
-  .welcome-section p {
-    font-size: 12px; /* Reduce paragraph size */
-  }
-
-  .total-users h3 {
-    font-size: 18px; /* Reduce chart center font size */
-  }
-
-  .stat-card h3 {
-    font-size: 24px; /* Further reduce stat font size */
+  .doughnut-chart-container {
+    width: 250px; /* Increased width */
+    height: 250px; /* Increased height */
+    margin-bottom: 15px; /* Retained for spacing */
   }
 }

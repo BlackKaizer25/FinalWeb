@@ -22,7 +22,7 @@ const Login = () => {
         }
 
         setErrorMessage('');
-        navigate('/accounts');
+        navigate('/home');
     };
 
     return (
